@@ -49,21 +49,21 @@ interfaces_l2:
 port_security:
   - name: e0/0
     maximum: 1
-    violation: restricted
+    violation: restrict
     sticky: true
     enabled: true
     port_fast: true
     bpdu_guard: true
   - name: e0/1
     maximum: 1
-    violation: restricted
+    violation: restrict
     sticky: true
     enabled: true
     port_fast: true
     bpdu_guard: true
   - name: e0/3
     maximum: 1
-    violation: restricted
+    violation: restrict
     sticky: true
     enabled: true
     port_fast: true
