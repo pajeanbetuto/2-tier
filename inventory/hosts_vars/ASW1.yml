@@ -1,0 +1,10 @@
+interfaces:
+  - name: e0/0
+    description: mgt_interface
+    enabled: true
+  - name: e0/1
+    description: to_CSW1
+    enabled: true
+  - name: e0/2
+    description: to_CSW2
+    enabled: true

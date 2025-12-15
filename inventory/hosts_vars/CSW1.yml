@@ -1,0 +1,25 @@
+interfaces:
+  - name: e0/0
+    description: mgt_interface
+    enabled: true
+  - name: e0/1
+    description: to_R1
+    enabled: true
+  - name: e0/2
+    description: to_R2
+    enabled: true
+  - name: e0/3
+    description: to_ASW1
+    enabled: true
+  - name: e1/0
+    description: to_ASW2
+    enabled: true
+  - name: e1/1
+    description: ether channel to CSW2
+    enabled: true
+  - name: e1/2
+    description: ether channel to CSW2
+    enabled: true
+  - name: e1/3
+    description: ether channel to CSW2
+    enabled: true

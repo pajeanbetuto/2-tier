@@ -1,0 +1,7 @@
+interfaces:
+  - name: e0/0
+    description: mgt_interface
+    enabled: true
+  - name: e0/1
+    description: dhcp_server_IP
+    enabled: true

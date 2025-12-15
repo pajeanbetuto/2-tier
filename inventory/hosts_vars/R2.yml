@@ -1,0 +1,20 @@
+interfaces:
+  - name: e0/0
+    description: mgt_interface
+    enabled: true
+  - name: e0/1
+    description: to backbone switch
+    enabled: true
+  - name: e0/2
+    description: to R4
+    enabled: true
+  - name: e0/3
+    description: to R1
+    enabled: true
+  - name: e1/0
+    description: to CSW2
+    enabled: true
+  - name: e1/1
+    description: to CSW1
+    enabled: true
+

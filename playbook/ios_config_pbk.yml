@@ -1,0 +1,8 @@
+- name: ios configuration
+  hosts: ios
+  gather_facts: false
+  connection: network_cli
+  tasks:
+    - name: interfaces
+      cisco.ios.ios_interfaces:
+        config: "{{interfaces}}"
