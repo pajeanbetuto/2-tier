@@ -12,7 +12,7 @@
           - switchport trunk encapsulation dot1q
           - switchport mode trunk
         parents: "{{item}}"
-        loop: {{interfaces|selectattr('mode','equalto','trunk')|map(attribute='name')}} #apply a filter to return interfaces that are mode trunk
+        loop: "{{interfaces|selectattr('mode','equalto','trunk')|map(attribute='name')}}" #apply a filter to return interfaces that are mode trunk
       when: inventory_hostname in groups['access_switches']
     - name: inerfaces_l2 on access switches
       cisco.ios.ios_l2_interfaces:
