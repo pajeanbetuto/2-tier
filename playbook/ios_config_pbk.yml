@@ -6,3 +6,7 @@
     - name: interfaces
       cisco.ios.ios_interfaces:
         config: "{{interfaces}}"
+    - name: inerfaces_l2 on access switches
+      cisco.ios.ios_l2_interfaces:
+        config: "{{interfaces_l2}}"
+      when: group_names == "access_switches"
