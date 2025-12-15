@@ -5,4 +5,8 @@
   tasks:
     - name: interfaces
       cisco.ios.ios_interfaces:
-        config: "{{interfaces}}"
+        config:
+          - name: "{{item.name}}"
+            description: "{{item.description}}"
+            enabled: "{{item.enabled}}"
+      loop: "{{interfaces}}"
