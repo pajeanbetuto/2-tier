@@ -8,11 +8,7 @@
         config: "{{interfaces}}"
     - name: encapsulation_trunk_interfaces
       cisco.ios.ios_config:
-        lines:
-          - switchport trunk encapsulation dot1q
-          - switchport mode trunk
-        parents: "{{item}}"
-        loop: "{{interfaces|selectattr('mode','equalto','trunk')|map(attribute='name')}}" #apply a filter to return interfaces that are mode trunk
+        src: "../templates/modetrunk.j2"
       when: inventory_hostname in groups['access_switches']
     - name: inerfaces_l2 on access switches
       cisco.ios.ios_l2_interfaces:

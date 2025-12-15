@@ -29,7 +29,7 @@ interfaces_l2:
         - 99
       native_vlan: 99
       encapsulation: dot1q
-  - name: e0/1
+  - name: e0/2
     mode: trunk
     trunk:
       allowed_vlans:
