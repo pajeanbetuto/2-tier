@@ -28,6 +28,7 @@ interfaces_l2:
         - 20
         - 99
       native_vlan: 99
+      encapsulation: dot1q
   - name: e0/1
     mode: trunk
     trunk:
@@ -36,6 +37,7 @@ interfaces_l2:
         - 20
         - 99
       native_vlan: 99
+      encapsulation: dot1q
   - name: e0/3
     mode: access
     access:
