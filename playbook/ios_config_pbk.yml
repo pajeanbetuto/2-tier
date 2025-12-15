@@ -9,4 +9,4 @@
     - name: inerfaces_l2 on access switches
       cisco.ios.ios_l2_interfaces:
         config: "{{interfaces_l2}}"
-      when: group_names == "access_switches"
+      when: inventory_hostname in groups['access_switches']
