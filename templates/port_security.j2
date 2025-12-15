@@ -1,0 +1,18 @@
+{% for port in port_security %}
+interface {{ port.name }}
+  {% if port.enabled %}
+  switchport mode access
+  switchport port-security
+  switchport port-security maximum {{ port.maximum }}
+  switchport port-security violation {{ port.violation }}
+    {% if port.sticky %}
+  switchport port-security mac-address sticky
+    {% endif %}
+    {% if port.port_fast %}
+  spanning-tree portfast
+    {% endif %}
+    {% if port.bpdu_guard %}
+  spanning-tree bpduguard enable
+    {% endif %}
+  {% endif %}
+{% endfor %}

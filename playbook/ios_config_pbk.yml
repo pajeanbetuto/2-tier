@@ -15,3 +15,7 @@
         config: "{{interfaces_l2}}"
         state: merged
       when: inventory_hostname in groups['access_switches']
+    - name: run port-security script
+      cisco.ios.ios_config:
+        src: "../templates/port_security.j2"
+      when: inventory_hostname in groups['access_switches']
