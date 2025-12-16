@@ -38,19 +38,19 @@ ospf:
   processes:
     - process_id: 1
       router_id: 1.1.2.1
-      networks:
-        - prefix: 192.168.1.0
-          mask: 255.255.255.0
+      network:
+        - address: 192.168.1.0
+          wildcard_bits: 0.0.0.255
           area: 0
-        - prefix: 192.168.4.0
-          mask: 255.255.255.248
+        - address: 192.168.4.0
+          wildcard_bits: 0.0.0.7
           area: 0
-        - prefix: 192.168.0.26
-          mask: 255.255.255.0
+        - address: 192.168.0.26
+          wildcard_bits: 0.0.0.3
           area: 0
-        - prefix: 192.168.0.30
-          mask: 255.255.255.252
+        - address: 192.168.0.30
+          wildcard_bits: 0.0.0.3
           area: 0
-        - prefix: 192.168.5.0
-          mask: 255.255.255.0
+        - address: 192.168.5.0
+          wildcard_bits: 0.0.0.255
           area: 0

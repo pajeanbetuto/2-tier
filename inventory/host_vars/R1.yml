@@ -46,20 +46,20 @@ ospf:
       router_id: 1.1.2.1
       network:
         - address: 192.168.1.0
-          wildcard_bits: 255.255.255.0
+          wildcard_bits: 0.0.0.0
           area: 0
         - address: 192.168.4.0
-          wildcard_bits: 255.255.255.248
+          wildcard_bits: 0.0.0.7
           area: 0
         - address: 192.168.0.16
-          wildcard_bits: 255.255.255.252
+          wildcard_bits: 0.0.0.3
           area: 0
         - address: 192.168.0.20
-          wildcard_bits: 255.255.255.252
+          wildcard_bits: 0.0.0.3
           area: 0
         - address: 192.168.0.0
-          wildcard_bits: 255.255.255.252
+          wildcard_bits: 0.0.0.3
           area: 0
         - address: 192.168.0.12
-          wildcard_bits: 255.255.255.252
+          wildcard_bits: 0.0.0.3
           area: 0
