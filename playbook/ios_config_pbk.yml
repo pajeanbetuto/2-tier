@@ -22,7 +22,7 @@
     - name: send no switchport command
       cisco.ios.ios_config:
         lines:
-          - "interface {{item}}"
+          - "interface {{ item }}"
           - "no switchport"
       loop:
         - e0/1

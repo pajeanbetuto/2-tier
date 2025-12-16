@@ -31,4 +31,26 @@ interfaces_l3:
       - address: 192.168.0.30/30
   - name: e1/0
     ipv4:
-      - address: 192.168.5.2/30
+      - address: 192.168.5.2/24
+
+
+ospf:
+  processes:
+    - process_id: 1
+      router_id: 1.1.2.1
+      networks:
+        - prefix: 192.168.1.0
+          mask: 255.255.255.0
+          area: 0
+        - prefix: 192.168.4.0
+          mask: 255.255.255.248
+          area: 0
+        - prefix: 192.168.0.26
+          mask: 255.255.255.0
+          area: 0
+        - prefix: 192.168.0.30
+          mask: 255.255.255.252
+          area: 0
+        - prefix: 192.168.5.0
+          mask: 255.255.255.0
+          area: 0
