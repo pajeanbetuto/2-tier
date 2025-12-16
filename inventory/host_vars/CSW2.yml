@@ -59,18 +59,12 @@ interfaces_l3:
   - name: vlan 10
     ipv4:
       - address: 192.168.2.2/24
-    helper_addresses:
-      ipv4:
-        - destination_ip: 192.168.1.9
   - name: vlan 20
     ipv4:
       - address: 192.168.3.2/24
-    helper_addresses:
-      ipv4:
-        - destination_ip: 192.168.1.9
   - name: e0/1
     ipv4:
       - address: 192.168.0.9/30
   - name: e0/2
     ipv4:
-      - address: 192.168.0.13/30
+      - address: 192.168.0.5/30
