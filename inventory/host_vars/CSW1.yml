@@ -68,6 +68,13 @@ interfaces_l3:
     ipv4:
       - address: 192.168.0.5/30
 
+helper_addresses:
+  - interface: vlan 10
+    helper_address: 192.168.5.10
+
+  - interface: vlan 20
+    helper_address: 192.168.5.10
+
 ospf:
   processes:
     - process_id: 1

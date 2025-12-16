@@ -5,3 +5,36 @@ interfaces:
   - name: e0/1
     description: dhcp_server_IP
     enabled: true
+
+interfaces_l3:
+  - name: e0/1
+    ipv4:
+      - address: 192.168.5.10/24
+
+dhcp:
+  exclude_address:
+    ip:
+      - 192.168.2.1
+      - 192.168.4.1
+    range:
+      - name: LAN1
+        start: 192.168.2.2
+        end: 192.168.2.9
+      - name: LAN2
+        start: 192.168.3.2
+        end: 192.168.3.9
+  pools:
+    - pool: LAN1
+      network: 192.168.2.0
+      mask: 255.255.255.0
+      gateway: 192.168.2.1
+      dns_server:
+        - 8.8.8.8
+        - 8.8.4.4
+    - pool: LAN2
+      network: 192.168.3.0
+      mask: 255.255.255.0
+      gateway: 192.168.3.1
+      dns_server:
+        - 8.8.8.8
+        - 8.8.4.4
