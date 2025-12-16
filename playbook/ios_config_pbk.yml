@@ -19,3 +19,8 @@
       cisco.ios.ios_config:
         src: "../templates/port_security.j2"
       when: inventory_hostname in groups['access_switches']
+    - name: interfaces_l3
+      cisco.ios.ios_l3_interfaces:
+        config: "{{interfaces_l3}}"
+        state: merged
+      when: inventory_hostname in groups['core_switches'] and inventory_hostname in groups['routers']

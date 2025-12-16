@@ -47,14 +47,14 @@ interfaces_l2:
     access:
       vlan: 20
 port_security:
-  - name: e0/1
+  - name: e0/3
     maximum: 1
     violation: restrict
     sticky: true
     enabled: true
     port_fast: true
     bpdu_guard: true
-  - name: e0/3
+  - name: e1/0
     maximum: 1
     violation: restrict
     sticky: true
