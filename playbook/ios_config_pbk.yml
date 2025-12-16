@@ -19,6 +19,13 @@
       cisco.ios.ios_config:
         src: "../templates/port_security.j2"
       when: inventory_hostname in groups['access_switches']
+    - name: send no switchport command
+      cisco.ios.ios_config:
+        lines:
+          - "interface {{item}}"
+          - "no switchport"
+        parents: "{{interfaces}}"
+      when: inventory_hostname in groups['core_switches']
     - name: interfaces_l3
       cisco.ios.ios_l3_interfaces:
         config: "{{interfaces_l3}}"
