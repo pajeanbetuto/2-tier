@@ -33,7 +33,7 @@
         - lines:
             - "interface {{ item.interface }}"
             - "ip helper-address {{ item.helper_address }}"
-      loop: {{helper_addresses}}
+      loop: "{{helper_addresses}}"
       when: inventory_hostname in groups['core_switches']
     - name: interfaces_l3
       cisco.ios.ios_l3_interfaces:
