@@ -55,7 +55,7 @@ ospf:
           area: 0
       passive_interfaces:
         default: true
-        interfaces:
+        interface:
           set_interface: false
           name:
             - e0/1
