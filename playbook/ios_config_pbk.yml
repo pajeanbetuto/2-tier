@@ -24,7 +24,9 @@
         lines:
           - "interface {{item}}"
           - "no switchport"
-        parents: "{{interfaces | map('extract', 'name')}}"
+      loop:
+        - e0/1
+        - e0/2
       when: inventory_hostname in groups['core_switches']
     - name: interfaces_l3
       cisco.ios.ios_l3_interfaces:
