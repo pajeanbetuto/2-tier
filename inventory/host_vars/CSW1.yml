@@ -24,10 +24,10 @@ interfaces:
     description: ether channel to CSW2
     enabled: true
   - name: vlan 10
-    description: ether channel to CSW2
+    description: LAN1
     enabled: true
   - name: vlan 20
-    description: ether channel to CSW2
+    description: LAN2
     enabled: true
 
 interfaces_l2:
