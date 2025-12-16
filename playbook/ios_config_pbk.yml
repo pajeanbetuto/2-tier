@@ -33,3 +33,7 @@
         config: "{{interfaces_l3}}"
         state: merged
       when: inventory_hostname in groups['core_switches'] or inventory_hostname in groups['routers']
+    - name: run ospf
+      cisco.ios.ios_ospfv2:
+        config: "{{ospf}}"
+      when: inventory_hostname in groups['core_switches'] or inventory_hostname in groups['routers']
