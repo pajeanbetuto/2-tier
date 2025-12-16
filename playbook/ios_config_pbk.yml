@@ -43,7 +43,7 @@
     - name: dhcp_server
       cisco.ios.ios_config:
         src: "../templates/dhcp.j2"
-      when: inventory_hostname == "DHCP_SERVER
+      when: inventory_hostname == "DHCP_SERVER"
     - name: run ospf
       cisco.ios.ios_ospfv2:
         config: "{{ospf}}"
