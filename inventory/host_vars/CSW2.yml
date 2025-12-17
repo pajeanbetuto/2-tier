@@ -32,7 +32,6 @@ interfaces:
 vlans:
   - vlan 10
   - vlan 20
-  -
 interfaces_l2:
 #  - name: e0/0
 #    mode: access

@@ -30,8 +30,7 @@
       when: inventory_hostname in groups['core_switches']
     - name: activate vlans on core switches
       cisco.ios.ios_config:
-        lines:
-          - "{{item}}"
+        lines: "{{ item }}"
         loop: "{{vlans}}"
       when: inventory_hostname in groups['core_switches']
     - name: run helper address commands
@@ -59,7 +58,7 @@
         lines:
           - ip route 0.0.0.0 0.0.0.0 e0/1
       when: inventory_hostname == "DHCP_SERVER"
-#    - name: save
-#      cisco.ios.ios_command:
-#        commands:
-#          - write memory
+    - name: save
+      cisco.ios.ios_command:
+        commands:
+          - write memory
