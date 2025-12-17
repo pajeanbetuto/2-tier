@@ -15,7 +15,7 @@ dhcp:
   exclude_address:
     ip:
       - 192.168.2.1
-      - 192.168.4.1
+      - 192.168.3.1
     range:
       - name: LAN1
         start: 192.168.2.2
