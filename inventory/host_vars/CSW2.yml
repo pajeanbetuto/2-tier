@@ -29,9 +29,8 @@ interfaces:
   - name: vlan 20
     description: LAN2
     enabled: true
-vlans:
-  - vlan 10
-  - vlan 20
+
+
 interfaces_l2:
 #  - name: e0/0
 #    mode: access
