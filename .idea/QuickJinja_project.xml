@@ -3,7 +3,7 @@
   <component name="de.achimonline.quickjinja.settings.QuickJinjaProjectSettingsState">
     <option name="settings">
       <QuickJinjaProjectSettings>
-        <option name="templateFilePath" value="$PROJECT_DIR$/inventory/host_vars/R3.yml" />
+        <option name="templateFilePath" value="$PROJECT_DIR$/inventory/host_vars/CSW2.yml" />
         <option name="variables" value="port_security:&#10;  - name: e0/0&#10;    maximum: 1&#10;    violation: restricted&#10;    sticky: true&#10;    enabled: true&#10;    port_fast: true&#10;    bpdu_guard: true&#10;  - name: e0/1&#10;    maximum: 1&#10;    violation: restricted&#10;    sticky: true&#10;    enabled: true&#10;    port_fast: true&#10;    bpdu_guard: true&#10;  - name: e0/3&#10;    maximum: 1&#10;    violation: restricted&#10;    sticky: true&#10;    enabled: true&#10;    port_fast: true&#10;    bpdu_guard: true" />
       </QuickJinjaProjectSettings>
     </option>
