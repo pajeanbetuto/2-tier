@@ -28,6 +28,12 @@
         - e0/1
         - e0/2
       when: inventory_hostname in groups['core_switches']
+    - name: activate vlans on core switches
+      cisco.ios.ios_config:
+        lines:
+          - "{{item}}"
+        loop: "{{vlans}}"
+      when: inventory_hostname in groups['core_switches']
     - name: run helper address commands
       cisco.ios.ios_config:
         lines:
@@ -48,3 +54,12 @@
       cisco.ios.ios_ospfv2:
         config: "{{ospf}}"
       when: inventory_hostname in groups['core_switches'] or inventory_hostname in groups['routers']
+    - name: default_route_ for DHCP_server
+      cisco.ios.ios_config:
+        lines:
+          - ip route 0.0.0.0 0.0.0.0 e0/1
+      when: inventory_hostname == "DHCP_SERVER"
+#    - name: save
+#      cisco.ios.ios_command:
+#        commands:
+#          - write memory
