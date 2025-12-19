@@ -1,0 +1,9 @@
+{%for vrrp in vrrps%}
+interface {{vrrp.interface}}
+vrrp {{vrrp.id}} ip {{vrrp.virtual_ip}}
+vrrp {{vrrp.id}} ip {{vrrp.priority}}
+vrrp {{vrrp.id}} ip {{vrrp.virtual_ip}}
+{%if vrrp.preempt%}
+vrrp {{vrrp.id}} preempt
+{%endif%}
+{%endfor%}

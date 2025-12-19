@@ -54,6 +54,11 @@
         lines:
           - ip route 0.0.0.0 0.0.0.0 e0/1
       when: inventory_hostname == "DHCP_SERVER"
+
+    - name: send vrrp commands
+      cisco.ios.ios_config:
+        src: "../templates/vrrp.j2"
+      when: inventory_hostname in groups['core_switches']
     - name: save
       cisco.ios.ios_command:
         commands:

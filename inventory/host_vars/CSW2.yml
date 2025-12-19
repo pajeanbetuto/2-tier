@@ -94,3 +94,16 @@ ospf:
         - address: 192.168.0.12
           wildcard_bits: 0.0.0.3
           area: 0
+
+
+vrrps:
+  - id: 10
+    interface: vlan 10
+    virtual_ip: 192.168.2.3
+    priority: 100
+    preempt: true
+  - id: 20
+    interface: vlan 20
+    virtual_ip: 192.168.3.3
+    priority: 100
+    preempt: true

@@ -1,0 +1,6 @@
+dns_server:
+  - 192.168.5.12
+syslog_server:
+  - 192.168.5.11
+sftp_server:
+  - 192.168.5.13
