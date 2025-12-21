@@ -21,7 +21,7 @@
       cisco.ios.ios_command:
         commands: "{{ lookup('file', '../templates/cisco_hc_script.txt') }}"
       register: hc_output
-      when: ansible_network_os == "ios"
+      when: ansible_network_os == "cisco.ios.ios"
     - name: save hc output
       copy:
         content: "{{ hc_output.stdout[0] }}"
