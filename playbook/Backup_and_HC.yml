@@ -19,7 +19,7 @@
  #     when: ansible_network_os == "junos"
     - name: send hc commands
       cisco.ios.ios_command:
-        commands: {{ lookup('file', '../templates/cisco_hc_script.txt') }}
+        commands: "{{ lookup('file', '../templates/cisco_hc_script.txt') }}"
       register: hc_output
       when: ansible_network_os == "ios"
     - name: save hc output
