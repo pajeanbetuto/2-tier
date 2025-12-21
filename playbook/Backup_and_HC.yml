@@ -1,0 +1,29 @@
+- name: Backup and HC
+  hosts: all
+  gather_facts: no
+  tasks:
+    - name: Backup and HC Cisco nodes
+      cisco.ios.ios_config:
+        backup: yes
+        backup_options:
+          filename: "{{ inventory_hostname }}_backup_{{ now( '%Y-%m-%d_%H-%M-%S' ) }}.conf"
+          dir_path: "./files/backup/"
+      when: ansible_network_os == "ios"
+
+ #   - name: Backup and HC Juniper nodes
+ #     junipernetworks.junos.junos_config:
+ #       backup: yes
+ #       backup_options:
+ #         filename: "{{ inventory_hostname }}.conf"
+ #         dir_path: /home/backup
+ #     when: ansible_network_os == "junos"
+    - name: send hc commands
+      cisco.ios.ios_command:
+        commands: {{ lookup('file', '../templates/cisco_hc_script.txt') }}
+      register: hc_output
+      when: ansible_network_os == "ios"
+    - name: save hc output
+      copy:
+        content: "{{ hc_output.stdout[0] }}"
+        dest: "./files/hc/{{ inventory_hostname }}_{{ now( '%Y-%m-%d_%H-%M-%S' ) }}.txt"
+      when: ansible_network_os == "ios"
