@@ -3,7 +3,7 @@
   <component name="de.achimonline.quickjinja.settings.QuickJinjaProjectSettingsState">
     <option name="settings">
       <QuickJinjaProjectSettings>
-        <option name="templateFilePath" value="$PROJECT_DIR$/inventory/production.ini" />
+        <option name="templateFilePath" value="$PROJECT_DIR$/templates/cisco_hc_script.txt" />
         <option name="variables" value="interfaces:&#10;  - name: e0/0&#10;    description: mgt_interface&#10;    enabled: true&#10;  - name: e0/1&#10;    description: dhcp_server_IP&#10;    enabled: true&#10;&#10;interfaces_l3:&#10;  - name: e0/1&#10;    ipv4:&#10;      - address: 192.168.5.10/24&#10;&#10;dhcp:&#10;  exclude_address:&#10;    ip:&#10;      - 192.168.2.1&#10;      - 192.168.3.1&#10;    range:&#10;      - name: LAN1&#10;        start: 192.168.2.2&#10;        end: 192.168.2.9&#10;      - name: LAN2&#10;        start: 192.168.3.2&#10;        end: 192.168.3.9&#10;  pools:&#10;    - pool: LAN1&#10;      network: 192.168.2.0&#10;      mask: 255.255.255.0&#10;      gateway: 192.168.2.1&#10;      dns_server:&#10;        - 8.8.8.8&#10;        - 8.8.4.4&#10;    - pool: LAN2&#10;      network: 192.168.3.0&#10;      mask: 255.255.255.0&#10;      gateway: 192.168.3.1&#10;      dns_server:&#10;        - 8.8.8.8&#10;        - 8.8.4.4&#10;" />
       </QuickJinjaProjectSettings>
     </option>
