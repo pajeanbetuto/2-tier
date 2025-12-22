@@ -25,5 +25,5 @@
     - name: save hc output
       copy:
         content: "{{ hc_output.stdout[0] }}"
-        dest: "../files/hc/{{ inventory_hostname }}_{{ now( '%Y-%m-%d_%H-%M-%S' ) }}.txt"
+        dest: "{{ playbook_dir }}/../files/hc/{{ inventory_hostname }}_{{ now( '%Y-%m-%d_%H-%M-%S' ) }}.txt"
       when: ansible_network_os == "cisco.ios.ios"
